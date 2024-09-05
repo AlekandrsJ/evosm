@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mūsu darbi - SIA EVOS M</title>
+    <link rel="stylesheet" href="../style.jobs.css"> <!-- Ensure your original styles are applied -->
+    <style>
+        .job-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .job {
+            flex: 1 0 21%; /* Adjusts the size of images and ensures 4 images per row */
+            box-sizing: border-box;
+            max-width: 23%;
+            position: relative;
+            cursor: pointer;
+        }
+        .job img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.3s ease; /* Smooth scale effect */
+        }
+        .job:hover img {
+            transform: scale(1.05); /* Slightly enlarge image on hover */
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.9);
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .modal-content {
+            max-width: 90%;
+            max-height: 90%;
+            margin: auto;
+        }
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: #fff;
+            font-size: 30px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .pagination {
+            margin: 20px 0;
+            text-align: center;
+        }
+        .pagination a {
+            margin: 0 5px;
+            padding: 8px 16px;
+            background-color: #f4f4f4;
+            text-decoration: none;
+            color: #333;
+            border: 1px solid #ddd;
+        }
+        .pagination a:hover {
+            background-color: #ddd;
+        }
+        footer {
+            background-color: #800000;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Mūsu darbi</h1>
+    </header>
+    <nav>
+        <a href="../html/index.html">SĀKUMS</a>
+        <a href="../html/about.html">PAR MUMS</a>
+        <a href="../html/services.html">PAKALPOJUMI</a>
+        <a href="../html/jobs.html">MŪSU DARBI</a>
+        <a href="../html/contact.html">KONTAKTI</a>
+    </nav>
+    <div class="container">
+        <div class="job-list" id="jobList"></div>
+
+        <div class="pagination" id="pagination"></div>
+    </div>
+
+    <!-- Modal for displaying larger image -->
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="img01">
+    </div>
+
+    <footer>
+        <p>&copy; 2024 SIA EVOS M. Visas tiesības aizsargātas.</p>
+    </footer>
+
+    <script>
+        const images = [
+            "../job_pictures/WhatsApp Image 2024-09-03 at 10.20.40 (4).jpeg",
+"../job_pictures/WhatsApp Image 2024-09-03 at 10.20.40.jpeg",
+"../job_pictures/WhatsApp Image 2024-09-03 at 10.20.41 (1).jpeg",
+"../job_pictures/WhatsApp Image 2024-09-03 at 10.20.41 (2).jpeg",
+"../job_pictures/WhatsApp Image 2024-09-03 at 10.20.41 (3).jpeg",
+"../job_pictures/WhatsApp Image 2024-09-03 at 10.20.41 (4).jpeg",
+"../job_pictures/WhatsApp Image 2024-09-03 at 10.20.41 (5).jpeg",
+"../job_pictures/WhatsApp Image 2024-09-03 at 10.20.41.jpeg",
+"../job_pictures/WhatsApp Image 2024-09-03 at 10.20.42 (1).jpeg",
+"../job_pictures/WhatsApp Image 2024-09-03 at 10.20.42 (2).jpeg",
+"../job_pictures/WhatsApp Image 2024-09-03 at 10.20.42 (3).jpeg",
+"../job_pictures/WhatsApp Image 2024-09-03 at 10.20.42 (4).jpeg",
+"../job_pictures/WhatsApp Image 2024-09-03 at 10.20.42 (5).jpeg",
+"../job_pictures/WhatsApp Image 2024-09-03 at 10.20.42.jpeg",
+"../job_pictures/WhatsApp Image 2024-09-03 at 10.20.43 (1).jpeg",
+"../job_pictures/WhatsApp Image 2024-09-03 at 10.20.43 (2).jpeg",
+"../job_pictures/WhatsApp Image 2024-09-03 at 10.20.43 (3).jpeg",
+"../job_pictures/WhatsApp Image 2024-09-03 at 10.20.43.jpeg",
+"../job_pictures/WhatsApp Image 2024-09-03 at 10.22.11.jpeg",
+"../job_pictures/WhatsApp Image 2024-09-03 at 10.22.12 (1).jpeg",
+"../job_pictures/WhatsApp Image 2024-09-03 at 10.22.12 (2).jpeg",
+"../job_pictures/WhatsApp Image 2024-09-03 at 10.22.12 (3).jpeg",
+"../job_pictures/WhatsApp Image 2024-09-03 at 10.22.12 (4).jpeg",
+"../job_pictures/WhatsApp Image 2024-09-03 at 10.22.12.jpeg",
+"../job_pictures/WhatsApp Image 2024-09-03 at 10.22.13 (1).jpeg",
+"../job_pictures/WhatsApp Image 2024-09-03 at 10.22.13 (2).jpeg",
+"../job_pictures/WhatsApp Image 2024-09-03 at 10.22.13 (3).jpeg",
+"../job_pictures/WhatsApp Image 2024-09-03 at 10.22.13 (4).jpeg",
+"../job_pictures/WhatsApp Image 2024-09-03 at 10.22.13 (5).jpeg",
+"../job_pictures/WhatsApp Image 2024-09-03 at 10.22.13.jpeg",
+"../job_pictures/WhatsApp Image 2024-09-03 at 10.29.28 (1).jpeg",
+"../job_pictures/WhatsApp Image 2024-09-03 at 10.29.28 (2).jpeg",
+"../job_pictures/WhatsApp Image 2024-09-03 at 10.29.28 (3).jpeg",
+"../job_pictures/WhatsApp Image 2024-09-03 at 10.29.28 (4).jpeg",
+"../job_pictures/WhatsApp Image 2024-09-03 at 10.29.28.jpeg",
+"../job_pictures/WhatsApp Image 2024-09-03 at 10.29.29 (1).jpeg",
+"../job_pictures/WhatsApp Image 2024-09-03 at 10.29.29 (2).jpeg",
+"../job_pictures/WhatsApp Image 2024-09-03 at 10.29.29 (3).jpeg",
+"../job_pictures/WhatsApp Image 2024-09-03 at 10.29.29.jpeg",
+"../job_pictures/WhatsApp Image 2024-09-03 at 10.30.37 (1).jpeg",
+"../job_pictures/WhatsApp Image 2024-09-03 at 10.30.37 (2).jpeg",
+"../job_pictures/WhatsApp Image 2024-09-03 at 10.30.37 (3).jpeg",
+"../job_pictures/WhatsApp Image 2024-09-03 at 10.30.37.jpeg",
+"../job_pictures/WhatsApp Image 2024-09-03 at 10.30.38 (1).jpeg",
+"../job_pictures/WhatsApp Image 2024-09-03 at 10.30.38 (2).jpeg",
+"../job_pictures/WhatsApp Image 2024-09-03 at 10.30.38 (3).jpeg",
+"../job_pictures/WhatsApp Image 2024-09-03 at 10.30.38 (4).jpeg",
+"../job_pictures/WhatsApp Image 2024-09-03 at 10.30.38 (5).jpeg",
+"../job_pictures/WhatsApp Image 2024-09-03 at 10.30.38.jpeg"
+
+        ]; // Add your images here
+
+        const imagesPerPage = 12;
+        let currentPage = 1;
+
+        function renderImages() {
+            const jobList = document.getElementById('jobList');
+            jobList.innerHTML = '';
+            const startIndex = (currentPage - 1) * imagesPerPage;
+            const endIndex = Math.min(startIndex + imagesPerPage, images.length);
+            const imagesForPage = images.slice(startIndex, endIndex);
+
+            imagesForPage.forEach(image => {
+                const jobDiv = document.createElement('div');
+                jobDiv.classList.add('job');
+                jobDiv.setAttribute('onclick', `openModal('${image}')`);
+
+                const img = document.createElement('img');
+                img.src = image;
+                jobDiv.appendChild(img);
+                jobList.appendChild(jobDiv);
+            });
+        }
+
+        function renderPagination() {
+            const pagination = document.getElementById('pagination');
+            pagination.innerHTML = '';
+            const totalPages = Math.ceil(images.length / imagesPerPage);
+
+            for (let i = 1; i <= totalPages; i++) {
+                const pageLink = document.createElement('a');
+                pageLink.textContent = i;
+                pageLink.href = "#";
+                pageLink.onclick = function () {
+                    currentPage = i;
+                    renderImages();
+                    renderPagination();
+                    return false;
+                };
+
+                if (i === currentPage) {
+                    pageLink.style.fontWeight = 'bold';
+                }
+
+                pagination.appendChild(pageLink);
+            }
+        }
+
+        function openModal(src) {
+            const modal = document.getElementById("myModal");
+            const modalImg = document.getElementById("img01");
+
+            modal.style.display = "flex";
+            modalImg.src = src;
+        }
+
+        function closeModal() {
+            const modal = document.getElementById("myModal");
+            modal.style.display = "none";
+        }
+
+        // Initialize the page
+        renderImages();
+        renderPagination();
+    </script>
+</body>
+</html>
