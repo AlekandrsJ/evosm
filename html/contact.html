@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Par mums - SIA SILRAK BŪVE</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #800000;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        nav {
+            text-align: center;
+            background-color: #660000;
+            padding: 10px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .rekviziti, .kontaktinformacija {
+            display: inline-block;
+            vertical-align: top;
+            width: 45%;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        .rekviziti h2, .kontaktinformacija h2 {
+            margin-top: 0;
+            color: #800000;
+        }
+        .form-section {
+            background-color: #800000;
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .form-section h2 {
+            margin-top: 0;
+        }
+        .form-section p {
+            margin: 10px 0 20px;
+        }
+        .form-section form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .form-section form input,
+        .form-section form textarea {
+            margin-bottom: 10px;
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            width: 80%;
+            max-width: 500px;
+            font-size: 16px;
+        }
+        .form-section form input[type="submit"] {
+            background-color: white;
+            color: #800000;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .form-section form input[type="submit"]:hover {
+            background-color: #f4f4f4;
+        }
+        footer {
+            background-color: #800000;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>SIA EVOS M </h1>
+    </header>
+    <nav>
+        <a href="../html/index.html">SĀKUMS</a>
+        <a href="../html/about.html">PAR MUMS</a>
+        <a href="../html/services.html">PAKALPOJUMI</a>
+        <a href="../php/jobs.php">MŪSU DARBI</a>
+        <a href="../html/contact.html">KONTAKTI</a>
+    </nav>
+    <div class="container">
+        <div style="display: flex; justify-content: space-between; gap: 20px;">
+            <div class="rekviziti">
+                <h2>Rekvizīti</h2>
+                <p>Juridiskā adrese: Jelgavas, Robežu iela 45, LV-3002<br>
+                Reģ. Nr: 40203571430<br>
+                Banka: Swedbank<br>
+                Bankas konts: LV92HABA0551058133274<br>
+                Bankas kods: habalv22</p>
+            </div>
+            <div class="kontaktinformacija">
+                <h2>Kontaktinformācija</h2>
+                Tālruņa nr: 26825818<br>
+                E-pasts: evosm@gmail.com</p>
+            </div>
+        </div>
+        <div class="form-section">
+            <h2>Sazinies ar mums</h2>
+            <p>Aizpildot saziņas formu</p>
+            <form action="mailto:evosm@gmail.com" method="post" enctype="text/plain">
+                <input type="text" name="name" placeholder="Jūsu vārds (obligāts)" required>
+                <input type="email" name="email" placeholder="Jūsu e-pasts (obligāts)" required>
+                <textarea name="message" rows="5" placeholder="Jūsu teksts (obligāts)" required></textarea>
+                <input type="submit" value="Nosūtīt e-pastu">
+            </form>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 SIA EVOS M. Visas tiesības aizsargātas.</p>
+    </footer>
+</body>
+</html>

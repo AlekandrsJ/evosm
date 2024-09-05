@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sveicināti - SIA EVOS M</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #800000;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        nav {
+            text-align: center;
+            background-color: #660000;
+            padding: 10px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .hero {
+            background-image: url('path/to/your-hero-image.jpg'); /* Aizstāj ar īsto attēla ceļu */
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        .hero h2 {
+            font-size: 3em;
+            margin: 0;
+            color: #FFD700; 
+        }
+        .hero p {
+            font-size: 1.5em;
+            margin: 10px 0;
+            color: #FFD700; 
+        }
+        .cta-button {
+            background-color: #800000;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            font-size: 1.2em;
+            border-radius: 5px;
+            display: inline-block;
+        }
+        .cta-button:hover {
+            background-color: #660000;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        .services {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 40px;
+        }
+        .service {
+            width: 30%;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        .service h3 {
+            color: #800000;
+            margin-top: 0;
+        }
+        .service p {
+            line-height: 1.6;
+        }
+        .featured-projects {
+            margin-top: 40px;
+            text-align: center;
+        }
+        .featured-projects img {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .testimonial {
+            background-color: #e9ecef;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
+        }
+        .testimonial p {
+            font-style: italic;
+        }
+        footer {
+            background-color: #800000;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Sveicināti SIA EVOS M mājaslapā</h1>
+    </header>
+    <nav>
+        <a href="../html/index.html">SĀKUMS</a>
+        <a href="../html/about.html">PAR MUMS</a>
+        <a href="../html/services.html">PAKALPOJUMI</a>
+        <a href="../php/jobs.php">MŪSU DARBI</a>
+        <a href="../html/contact.html">KONTAKTI</a>
+    </nav>
+    <div class="hero">
+        <h2>Uzticams partneris celtniecībā</h2>
+        <p>Mēs radam mājokļus, kas atbilst Jūsu sapņiem</p>
+        <a href="../html/services.html" class="cta-button">Uzzināt vairāk</a>
+    </div>
+    <div class="container">
+        <section class="services">
+            <div class="service">
+                <h3>Mājokļu būvniecība</h3>
+                <p>Piedāvājam pilna cikla mājokļu būvniecības pakalpojumus, sākot no projektēšanas līdz atslēgu nodošanai. Radām mājas, kas ir funkcionālas un estētiski pievilcīgas, pielāgotas jūsu dzīvesveidam.</p>
+            </div>
+            <div class="service">
+                <h3>Dzīvojamo telpu renovācija</h3>
+                <p>Atjaunojam un modernizējam dzīvojamās telpas, lai tās atbilstu mūsdienu standartiem. Mūsu mērķis ir radīt mājīgu un funkcionālu vidi, kas pilnībā atbilst jūsu vajadzībām.</p>
+            </div>
+            <div class="service">
+                <h3>Inženiertehniskie risinājumi</h3>
+                <p>Piedāvājam specializētus inženiertehniskos risinājumus, piemēram, ceļu būvi un ūdensapgādes sistēmu ierīkošanu. Nodrošinām kvalitatīvu un ilgtspējīgu infrastruktūru, kas kalpo nākotnei.</p>
+            </div>
+        </section>
+        <section class="featured-projects">
+            <h2>Izcelti Projekti</h2>
+            <img src="..\html\izceltais.jpeg" alt="Izcelts projekts">
+            <p>Skatiet mūsu nesenos projektus un iedvesmojieties no mūsu veiksmīgajiem darbiem.</p>
+            <a href="../php/jobs.php" class="cta-button">Apskatīt visus projektus</a>
+        </section>
+        <section class="testimonial">
+            <h2>Atsauksmes</h2>
+            <p>"SIA EVOS M sniedza izcilus būvniecības pakalpojumus. Mūsu jaunais mājoklis ir vienkārši lielisks, un mēs esam ļoti apmierināti ar rezultātu!" - Jānis B.</p>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2024 SIA EVOS M. Visas tiesības aizsargātas.</p>
+    </footer>
+</body>
+</html>
