@@ -1,171 +1,405 @@
 <!DOCTYPE html>
 <html lang="lv">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sveicināti - SIA EVOS M</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        header {
-            background-color: #800000;
-            color: white;
-            padding: 20px 0;
-            text-align: center;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        nav {
-            text-align: center;
-            background-color: #660000;
-            padding: 10px 0;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        nav a {
-            color: white;
-            margin: 0 15px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .hero {
-            background-image: url('path/to/your-hero-image.jpg'); /* Aizstāj ar īsto attēla ceļu */
-            background-size: cover;
-            background-position: center;
-            color: white;
-            text-align: center;
-            padding: 100px 20px;
-            margin-bottom: 40px;
-            position: relative;
-        }
-        .hero h2 {
-            font-size: 3em;
-            margin: 0;
-            color: #FFD700; 
-        }
-        .hero p {
-            font-size: 1.5em;
-            margin: 10px 0;
-            color: #FFD700; 
-        }
-        .cta-button {
-            background-color: #800000;
-            color: white;
-            padding: 15px 30px;
-            text-decoration: none;
-            font-size: 1.2em;
-            border-radius: 5px;
-            display: inline-block;
-        }
-        .cta-button:hover {
-            background-color: #660000;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            text-align: center;
-        }
-        .services {
-            display: flex;
-            justify-content: space-around;
-            margin-top: 40px;
-        }
-        .service {
-            width: 30%;
-            padding: 20px;
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
-        }
-        .service h3 {
-            color: #800000;
-            margin-top: 0;
-        }
-        .service p {
-            line-height: 1.6;
-        }
-        .featured-projects {
-            margin-top: 40px;
-            text-align: center;
-        }
-        .featured-projects img {
-            width: 100%;
-            max-width: 600px;
-            height: auto;
-            border-radius: 10px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        .testimonial {
-            background-color: #e9ecef;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            margin: 20px 0;
-        }
-        .testimonial p {
-            font-style: italic;
-        }
-        footer {
-            background-color: #800000;
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-            position: relative;
-            bottom: 0;
-            width: 100%;
-            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#2a2420" />
+  <title>EVOSM Construction | Būvniecības izcilība</title>
+  <meta name="description" content="Premium būvniecības pakalpojumi komerciāliem, dzīvojamiem un industriāliem projektiem. Vairāk nekā 25 gadi būvniecības izcilībā." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
-    <header>
-        <h1>Sveicināti SIA EVOS M mājaslapā</h1>
-    </header>
-    <nav>
-        <a href="../html/index.html">SĀKUMS</a>
-        <a href="../html/about.html">PAR MUMS</a>
-        <a href="../html/services.html">PAKALPOJUMI</a>
-        <a href="../php/jobs.php">MŪSU DARBI</a>
-        <a href="../html/contact.html">KONTAKTI</a>
+
+  <!-- ====== NAVIGĀCIJA ====== -->
+  <header class="navbar" id="navbar">
+    <nav class="navbar__inner">
+     <a href="/index.html" class="navbar__brand">
+  <img 
+    class="navbar__logo-img"
+    src="../job_pictures/WhatsApp%20Image%202026-02-19%20at%2019.37.00.jpeg" 
+    alt="EVOSM logo"
+  />
+  <span class="navbar__name">EVOSM</span>
+</a>
+      <ul class="navbar__links">
+        <li><a href="#services">Pakalpojumi</a></li>
+        <li><a href="#projects">Projekti</a></li>
+        <li><a href="#about">Par mums</a></li>
+        <li><a href="#testimonials">Atsauksmes</a></li>
+      </ul>
+      <a href="#contact" class="btn btn--accent navbar__cta">Kontakti</a>
+      <button class="navbar__toggle" id="navToggle" aria-label="Atvērt izvēlni">
+        <svg class="icon-menu" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+        <svg class="icon-close" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+      </button>
     </nav>
-    <div class="hero">
-        <h2>Uzticams partneris celtniecībā</h2>
-        <p>Mēs radam mājokļus, kas atbilst Jūsu sapņiem</p>
-        <a href="../html/services.html" class="cta-button">Uzzināt vairāk</a>
+    <div class="navbar__mobile" id="mobileMenu">
+      <ul>
+        <li><a href="#services">Pakalpojumi</a></li>
+        <li><a href="#projects">Projekti</a></li>
+        <li><a href="#about">Par mums</a></li>
+        <li><a href="#testimonials">Atsauksmes</a></li>
+        <li><a href="#contact" class="btn btn--accent btn--full">Kontakti</a></li>
+      </ul>
     </div>
+  </header>
+
+  <!-- ====== GALVENĀ SADAĻA (HERO) ====== -->
+  <section class="hero">
+    <img src="./images/hero.jpg" alt="Mūsdienīgs būvlaukums zelta stundā" class="hero__bg" />
+    <div class="hero__overlay"></div>
+    <div class="hero__content">
+      <p class="label label--accent">Būvniecības izcilība kopš 1998. gada</p>
+      <h1 class="hero__title">Mēs būvējam konstrukcijas<br/>kas iztur laika pārbaudi</h1>
+      <p class="hero__subtitle">No komerciālām daudzstāvu ēkām līdz privātmājām — nodrošinām meistarību un precizitāti katrā projektā.</p>
+      <div class="hero__actions">
+        <a href="#projects" class="btn btn--accent btn--lg">
+          Skatīt mūsu darbus
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+        <a href="#contact" class="btn btn--outline btn--lg">Saņemt tāmi</a>
+      </div>
+    </div>
+    <div class="hero__scroll">
+      <div class="hero__scroll-indicator">
+        <div class="hero__scroll-dot"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== PAKALPOJUMI ====== -->
+  <section id="services" class="section section--light">
     <div class="container">
-        <section class="services">
-            <div class="service">
-                <h3>Mājokļu būvniecība</h3>
-                <p>Piedāvājam pilna cikla mājokļu būvniecības pakalpojumus, sākot no projektēšanas līdz atslēgu nodošanai. Radām mājas, kas ir funkcionālas un estētiski pievilcīgas, pielāgotas jūsu dzīvesveidam.</p>
-            </div>
-            <div class="service">
-                <h3>Dzīvojamo telpu renovācija</h3>
-                <p>Atjaunojam un modernizējam dzīvojamās telpas, lai tās atbilstu mūsdienu standartiem. Mūsu mērķis ir radīt mājīgu un funkcionālu vidi, kas pilnībā atbilst jūsu vajadzībām.</p>
-            </div>
-            <div class="service">
-                <h3>Inženiertehniskie risinājumi</h3>
-                <p>Piedāvājam specializētus inženiertehniskos risinājumus, piemēram, ceļu būvi un ūdensapgādes sistēmu ierīkošanu. Nodrošinām kvalitatīvu un ilgtspējīgu infrastruktūru, kas kalpo nākotnei.</p>
-            </div>
-        </section>
-        <section class="featured-projects">
-            <h2>Izcelti Projekti</h2>
-            <img src="..\html\izceltais.jpeg" alt="Izcelts projekts">
-            <p>Skatiet mūsu nesenos projektus un iedvesmojieties no mūsu veiksmīgajiem darbiem.</p>
-            <a href="../php/jobs.php" class="cta-button">Apskatīt visus projektus</a>
-        </section>
-        <section class="testimonial">
-            <h2>Atsauksmes</h2>
-            <p>"SIA EVOS M sniedza izcilus būvniecības pakalpojumus. Mūsu jaunais mājoklis ir vienkārši lielisks, un mēs esam ļoti apmierināti ar rezultātu!" - Jānis B.</p>
-        </section>
+      <div class="section__header section__header--center">
+        <p class="label label--accent">Ko mēs darām</p>
+        <h2 class="section__title">Mūsu galvenie pakalpojumi</h2>
+        <p class="section__subtitle">Visaptveroša pieeja būvniecībai, kas aptver katru posmu — no idejas līdz nodošanai.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-card__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="20" x="4" y="2" rx="2" ry="2"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01"/><path d="M16 6h.01"/><path d="M12 6h.01"/><path d="M12 10h.01"/><path d="M12 14h.01"/><path d="M16 10h.01"/><path d="M16 14h.01"/><path d="M8 10h.01"/><path d="M8 14h.01"/></svg>
+          </div>
+          <h3 class="service-card__title">Komerciālā būvniecība</h3>
+          <p class="service-card__desc">Biroju ēkas, tirdzniecības telpas un jauktas funkcijas projekti atbilstoši augstākajiem standartiem.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-card__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <h3 class="service-card__title">Dzīvojamie projekti</h3>
+          <p class="service-card__desc">Privātmājas un daudzdzīvokļu risinājumi, kas veidoti pēc jūsu vīzijas un dzīvesstila.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-card__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8l-7 5V8l-7 5V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"/><path d="M17 18h1"/><path d="M12 18h1"/><path d="M7 18h1"/></svg>
+          </div>
+          <h3 class="service-card__title">Industriālās ēkas</h3>
+          <p class="service-card__desc">Noliktavas, ražotnes un loģistikas centri, kas izstrādāti efektivitātei un ilgmūžībai.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-card__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.3 15.3a2.4 2.4 0 0 1 0 3.4l-2.6 2.6a2.4 2.4 0 0 1-3.4 0L2.7 8.7a2.41 2.41 0 0 1 0-3.4l2.6-2.6a2.41 2.41 0 0 1 3.4 0Z"/><path d="m14.5 12.5 2-2"/><path d="m11.5 9.5 2-2"/><path d="m8.5 6.5 2-2"/><path d="m17.5 15.5 2-2"/></svg>
+          </div>
+          <h3 class="service-card__title">Pirmsbūvniecības plānošana</h3>
+          <p class="service-card__desc">Detalizēti priekšizpētes aprēķini, budžetēšana un projekta plāns pirms darbu uzsākšanas.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-card__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+          </div>
+          <h3 class="service-card__title">Projekta vadība</h3>
+          <p class="service-card__desc">Pilna cikla uzraudzība, nodrošinot termiņus, kvalitāti un budžeta ievērošanu.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-card__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+          </div>
+          <h3 class="service-card__title">Renovācija un restaurācija</h3>
+          <p class="service-card__desc">Esošo ēku pielāgošana un modernizācija ar rūpīgu precizitāti.</p>
+        </div>
+      </div>
     </div>
-    <footer>
-        <p>&copy; 2024 SIA EVOS M. Visas tiesības aizsargātas.</p>
-    </footer>
+  </section>
+
+  <!-- ====== PROJEKTI ====== -->
+  <section id="projects" class="section section--muted">
+    <div class="container">
+      <div class="section__header section__header--split">
+        <div>
+          <p class="label label--accent">Portfelis</p>
+          <h2 class="section__title">Izceltie projekti</h2>
+        </div>
+        <p class="section__aside">Katrs projekts atspoguļo mūsu apņemšanos inovācijām, kvalitatīviem materiāliem un uzmanībai pret detaļām.</p>
+      </div>
+      <div class="projects-grid">
+        <a href="#" class="project-card">
+          <div class="project-card__image">
+            <img src="../job_pictures/WhatsApp%20Image%202024-09-03%20at%2010.30.38%20(4).jpeg" alt="Projekts" />
+            <div class="project-card__overlay"></div>
+            <div class="project-card__arrow">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+            </div>
+          </div>
+          <div class="project-card__info">
+            <span class="label label--accent label--sm">Komerciāls</span>
+            <h3 class="project-card__title">Meridian Tower</h3>
+            <p class="project-card__desc">32 stāvu jauktas funkcijas tornis ar stikla fasādi un LEED Gold sertifikāciju.</p>
+          </div>
+        </a>
+        <a href="#" class="project-card">
+          <div class="project-card__image">
+             <img src="../job_pictures/WhatsApp Image 2024-09-03 at 10.20.42 (3).jpeg" alt="Projekts" />
+            <div class="project-card__overlay"></div>
+            <div class="project-card__arrow">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+            </div>
+          </div>
+          <div class="project-card__info">
+            <span class="label label--accent label--sm">Dzīvojamais</span>
+            <h3 class="project-card__title">The Oaks Residence</h3>
+            <p class="project-card__desc">Luksusa privātmāja, kurā apvienots koks, betons un plašs stiklojums.</p>
+          </div>
+        </a>
+        <a href="#" class="project-card">
+          <div class="project-card__image">
+            <img src="../job_pictures/WhatsApp Image 2024-09-03 at 10.20.43 (3).jpeg" alt="Projekts" />
+            <div class="project-card__overlay"></div>
+            <div class="project-card__arrow">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+            </div>
+          </div>
+          <div class="project-card__info">
+            <span class="label label--accent label--sm">Industriāls</span>
+            <h3 class="project-card__title">Ironworks Campus</h3>
+            <p class="project-card__desc">Vēsturiskas noliktavas pārbūve par modernu radošo biroju kompleksu.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== PAR MUMS ====== -->
+  <section id="about" class="section section--light">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about__image-wrap">
+          <img src="../job_pictures/WhatsApp%20Image%202024-09-03%20at%2010.30.37%20(3).jpeg" alt="" class="about__image" />
+          <div class="about__floating-card">
+            <p class="about__floating-value">25+</p>
+            <p class="about__floating-label">Gadi uzticības būvē</p>
+          </div>
+        </div>
+        <div class="about__content">
+          <p class="label label--accent">Par EVOSM</p>
+          <h2 class="section__title">Meistarība satiekas ar inovācijām</h2>
+          <p class="about__text">SIA EVOS M ir celtniecības uzņēmums, kas specializējas visaptverošos un mūsdienīgos būvniecības risinājumos. Mūsu kodolu veido pieredzējusi, augsti kvalificēta komanda ar vairāk nekā 10 gadu pieredzi nozarē, kas nodrošina kvalitatīvu darbu un individuāli pielāgotus risinājumus katram klientam. Strādājam ar uzticamību un precizitāti visos projekta posmos – no plānošanas līdz nodošanai ekspluatācijā, izmantojot jaunākās tehnoloģijas un kvalitatīvus materiālus. Piedāvājam ēku būvniecību, renovāciju, inženiertehniskos risinājumus un infrastruktūras darbus, radot ilgtspējīgus, funkcionālus projektus, kas pārsniedz klientu gaidas. Mēs esam uzticams partneris, uz kuru var paļauties.
+          <div class="stats-grid">
+            <div class="stat">
+              <p class="stat__value">25+</p>
+              <p class="stat__label">Gadu pieredze</p>
+            </div>
+            <div class="stat">
+              <p class="stat__value">500+</p>
+              <p class="stat__label">Pabeigti projekti</p>
+            </div>
+            <div class="stat">
+              <p class="stat__value">100%</p>
+              <p class="stat__label">Klientu Mūs iesaka</p>
+            </div>
+            <div class="stat">
+              <p class="stat__value">98%</p>
+              <p class="stat__label">Klientu apmierinātība</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== ATSAUKSMES ====== -->
+  <section id="testimonials" class="section section--dark">
+    <div class="container">
+      <div class="section__header section__header--center">
+        <p class="label label--accent">Atsauksmes</p>
+        <h2 class="section__title section__title--light">Ko saka mūsu klienti</h2>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-card__stars">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <blockquote class="testimonial-card__quote">&ldquo;Kvalitatīvi un ātrāk nekā solīts. Viņu projekta vadība ir izcila.&rdquo;</blockquote>
+          <div class="testimonial-card__author">
+            <p class="testimonial-card__name">Dāvids</p>
+            <p class="testimonial-card__role">Dzīvokļa īpašnieks</p>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-card__stars">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <blockquote class="testimonial-card__quote">&ldquo;Privātmājas būvniecība ar EVOSM bija lieliska pieredze. Viņi ieklausījās katrā detaļā un skaisti īstenoja mūsu vīziju.&rdquo;</blockquote>
+          <div class="testimonial-card__author">
+            <p class="testimonial-card__name">Liene</p>
+            <p class="testimonial-card__role">Mājas īpašniece</p>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-card__stars">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <blockquote class="testimonial-card__quote">&ldquo;Renovācija bija sarežģīts projekts, un EVOSM katru izaicinājumu atrisināja profesionāli. Patiešām izcila meistarība.&rdquo;</blockquote>
+          <div class="testimonial-card__author">
+            <p class="testimonial-card__name">Roberts</p>
+            <p class="testimonial-card__role">Dzīvokļa īpašnieks</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== KONTAKTI ====== -->
+  <section id="contact" class="section section--light">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact__info">
+          <p class="label label--accent">Būvēsim kopā</p>
+          <h2 class="section__title">Gatavs sākt nākamo projektu?</h2>
+          <p class="contact__text">Neatkarīgi no tā, vai tev jau ir skaidrs plāns vai tikai ideja — mūsu komanda ir gatava to īstenot. Sazinies bezmaksas konsultācijai.</p>
+          <div class="contact__details">
+            <div class="contact__item">
+              <div class="contact__item-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <div>
+                <p class="contact__item-label">Zvaniet mums</p>
+                <p class="contact__item-value">+371 26825818</p>
+              </div>
+            </div>
+            <div class="contact__item">
+              <div class="contact__item-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              </div>
+              <div>
+                <p class="contact__item-label">E-pasts</p>
+                <p class="contact__item-value">evosmlatvia@gmail.com</p>
+              </div>
+            </div>
+            <div class="contact__item">
+              <div class="contact__item-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div>
+                <p class="contact__item-label">Juridiskā adrese</p>
+                <p class="contact__item-value">Jelgava, Robežu iela 45, LV-3002</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contact__form-wrap">
+          <h3 class="contact__form-title">Pieprasīt bezmaksas tāmi</h3>
+          <p class="contact__form-subtitle">Aizpildi formu, un mēs atbildēsim 24 stundu laikā.</p>
+          <form class="contact__form" id="contactForm">
+            <div class="form-row form-row--2col">
+              <div class="form-group">
+                <label for="firstName">Vārds</label>
+                <input id="firstName" type="text" placeholder="Jānis" />
+              </div>
+              <div class="form-group">
+                <label for="lastName">Uzvārds</label>
+                <input id="lastName" type="text" placeholder="Bērziņš" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">E-pasts</label>
+              <input id="email" type="email" placeholder="janis@example.com" />
+            </div>
+            <div class="form-group">
+              <label for="projectType">Projekta veids</label>
+              <select id="projectType">
+                <option value="" disabled selected>Izvēlies veidu</option>
+                <option>Komerciāls</option>
+                <option>Dzīvojamais</option>
+                <option>Industriāls</option>
+                <option>Renovācija</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Ziņa</label>
+              <textarea id="message" rows="4" placeholder="Pastāsti par savu projektu..."></textarea>
+            </div>
+            <button type="submit" class="btn btn--accent btn--lg btn--full">Nosūtīt pieprasījumu</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== KĀJENE ====== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="/" class="navbar__brand">
+            <div class="navbar__logo">A</div>
+            <span class="navbar__name">EVOSM</span>
+          </a>
+          <p class="footer__desc">Celtniecības uzņēmums, kas specializējas visaptverošos un mūsdienīgos būvniecības risinājumos.</p>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__heading">Pakalpojumi</h4>
+          <ul>
+            <li><a href="#">Komerciālā būvniecība</a></li>
+            <li><a href="#">Dzīvojamie projekti</a></li>
+            <li><a href="#">Industriālās ēkas</a></li>
+            <li><a href="#">Renovācija un restaurācija</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__heading">Uzņēmums</h4>
+          <ul>
+            <li><a href="#">Par mums</a></li>
+            <li><a href="#">Mūsu komanda</a></li>
+            <li><a href="#">Vakances</a></li>
+            <li><a href="#">Kontakti</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__heading">Resursi</h4>
+          <ul>
+            <li><a href="#">Blogs</a></li>
+            <li><a href="#">Gadījumu izpētes</a></li>
+            <li><a href="#">Drošības standarti</a></li>
+            <li><a href="#">Ilgtspēja</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2026 EVOSM Construction. Visas tiesības aizsargātas.</p>
+        <div class="footer__legal">
+          <a href="#">Privātuma politika</a>
+          <a href="#">Pakalpojumu noteikumi</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./script.js"></script>
 </body>
 </html>
