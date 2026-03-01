@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#2a2420" />
+  <title>Galerija | EVOSM</title>
+  <meta name="description" content="Apskati mūsu pabeigto būvniecības projektu portfeli komerciālajā, dzīvojamo un industriālo objektu sektorā." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="gallery.css">
+</head>
+<body>
+
+  <!-- ====== NAVIGĀCIJA ====== -->
+  <header class="navbar" id="navbar">
+    <nav class="navbar__inner">
+      <a href="index.html" class="navbar__brand">
+        <img
+          class="navbar__logo-img"
+          src="../job_pictures/WhatsApp%20Image%202026-02-19%20at%2019.37.00.jpeg"
+          alt="EVOSM logo"
+        />
+      </a>
+
+      <ul class="navbar__links">
+        <li><a href="index.html">Atpakaļ</a></li>
+        <li><a href="gallery.html" class="navbar__link--active">Galerija</a></li>
+      </ul>
+
+      <button class="navbar__toggle" id="navToggle" aria-label="Atvērt izvēlni">
+        <svg class="icon-menu" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="4" x2="20" y1="12" y2="12"/>
+          <line x1="4" x2="20" y1="6" y2="6"/>
+          <line x1="4" x2="20" y1="18" y2="18"/>
+        </svg>
+        <svg class="icon-close" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none">
+          <path d="M18 6 6 18"/>
+          <path d="m6 6 12 12"/>
+        </svg>
+      </button>
+    </nav>
+
+    <div class="navbar__mobile" id="mobileMenu">
+      <ul>
+        <li><a href="index.html">Atpakaļ</a></li>
+        <li><a href="gallery.html">Galerija</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- ====== GALERIJAS HERO ====== -->
+  <section class="gallery-hero">
+    <div class="container">
+      <p class="label label--accent">MŪSU DARBI</p>
+      <h1 class="gallery-hero__title">Projektu galerija</h1>
+      <p class="gallery-hero__subtitle">Vizuāls apliecinājums meistarībai, precizitātei un objektiem, ar kuriem lepojamies.</p>
+    </div>
+  </section>
+
+  <!-- ====== FILTRI (pēc taviem failu nosaukumiem) ====== -->
+  <section class="gallery-filters">
+    <div class="container">
+      <div class="filter-bar">
+        <button class="filter-btn filter-btn--active" data-filter="all">Visi</button>
+        <button class="filter-btn" data-filter="durvis">Durvis</button>
+        <button class="filter-btn" data-filter="fasade">Fasāde</button>
+        <button class="filter-btn" data-filter="iekstelpa">Iekštelpas</button>
+        <button class="filter-btn" data-filter="telpa">Telpas</button>
+        <button class="filter-btn" data-filter="sanmezgls">Sanitārais mezgls</button>
+        <button class="filter-btn" data-filter="virtuve">Virtuve</button>
+        <button class="filter-btn" data-filter="terase">Terase</button>
+        <button class="filter-btn" data-filter="jumts">Jumts</button>
+        <button class="filter-btn" data-filter="kapnes">Kāpnes</button>
+        <button class="filter-btn" data-filter="krasns">Krāsns</button>
+        <button class="filter-btn" data-filter="logs">Logi</button>
+        <button class="filter-btn" data-filter="flizes">Flīzes</button>
+        <button class="filter-btn" data-filter="apmetums">Apmetums</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== GALERIJAS REŽĢIS (VISAS bildes) ====== -->
+  <section class="gallery-section">
+    <div class="container">
+      <div class="gallery-grid">
+
+        <!-- ====== APMETUMS ====== -->
+        <figure class="gallery-item" data-category="apmetums">
+          <img src="../job_pictures/Apmetums10.jpeg" alt="Apmetums 10" loading="lazy" />
+          <figcaption class="gallery-item__caption">
+            <span class="gallery-item__tag">Apmetums</span>
+            <p class="gallery-item__title">Gluds apmetums</p>
+          </figcaption>
+        </figure>
+
+        <!-- ====== DURVIS ====== -->
+        <figure class="gallery-item" data-category="durvis"><img src="../job_pictures/durvis%2030.jpeg" alt="Durvis 30" loading="lazy" /><figcaption class="gallery-item__caption"><span class="gallery-item__tag">Durvis</span><p class="gallery-item__title">Durvju montāža #30</p></figcaption></figure>
+        <figure class="gallery-item" data-category="durvis"><img src="../job_pictures/durvis%2041.jpeg" alt="Durvis 41" loading="lazy" /><figcaption class="gallery-item__caption"><span class="gallery-item__tag">Durvis</span><p class="gallery-item__title">Durvju montāža #41</p></figcaption></figure>
+        <figure class="gallery-item" data-category="durvis"><img src="../job_pictures/durvis%2042.jpeg" alt="Durvis 42" loading="lazy" /><figcaption class="gallery-item__caption"><span class="gallery-item__tag">Durvis</span><p class="gallery-item__title">Durvju montāža #42</p></figcaption></figure>
+        <figure class="gallery-item" data-category="durvis"><img src="../job_pictures/durvis%2046.jpeg" alt="Durvis 46" loading="lazy" /><figcaption class="gallery-item__caption"><span class="gallery-item__tag">Durvis</span><p class="gallery-item__title">Durvju montāža #46</p></figcaption></figure>
+
+        <figure class="gallery-item" data-category="durvis"><img src="../job_pictures/Durvis2.jpeg" alt="Durvis 2" loading="lazy" /><figcaption class="gallery-item__caption"><span class="gallery-item__tag">Durvis</span><p class="gallery-item__title">Durvju montāža #2</p></figcaption></figure>
+        <figure class="gallery-item" data-category="durvis"><img src="../job_pictures/Durvis3.jpeg" alt="Durvis 3" loading="lazy" /><figcaption class="gallery-item__caption"><span class="gallery-item__tag">Durvis</span><p class="gallery-item__title">Durvju montāža #3</p></figcaption></figure>
+        <figure class="gallery-item" data-category="durvis"><img src="../job_pictures/Durvis4.jpeg" alt="Durvis 4" loading="lazy" /><figcaption class="gallery-item__caption"><span class="gallery-item__tag">Durvis</span><p class="gallery-item__title">Durvju montāža #4</p></figcaption></figure>
+        <figure class="gallery-item" data-category="durvis"><img src="../job_pictures/Durvis5.jpeg" alt="Durvis 5" loading="lazy" /><figcaption class="gallery-item__caption"><span class="gallery-item__tag">Durvis</span><p class="gallery-item__title">Durvju montāža #5</p></figcaption></figure>
+        <figure class="gallery-item" data-category="durvis"><img src="../job_pictures/Durvis6.jpeg" alt="Durvis 6" loading="lazy" /><figcaption class="gallery-item__caption"><span class="gallery-item__tag">Durvis</span><p class="gallery-item__title">Durvju montāža #6</p></figcaption></figure>
+
+        <figure class="gallery-item" data-category="durvis"><img src="../job_pictures/durvis7.jpeg" alt="Durvis 7" loading="lazy" /><figcaption class="gallery-item__caption"><span class="gallery-item__tag">Durvis</span><p class="gallery-item__title">Durvju montāža #7</p></figcaption></figure>
+        <figure class="gallery-item" data-category="durvis"><img src="../job_pictures/durvis8%20copy.jpeg" alt="Durvis 8 copy" loading="lazy" /><figcaption class="gallery-item__caption"><span class="gallery-item__tag">Durvis</span><p class="gallery-item__title">Durvju montāža #8</p></figcaption></figure>
+        <figure class="gallery-item" data-category="durvis"><img src="../job_pictures/durvis8.jpeg" alt="Durvis 8" loading="lazy" /><figcaption class="gallery-item__caption"><span class="gallery-item__tag">Durvis</span><p class="gallery-item__title">Durvju montāža #8</p></figcaption></figure>
+        <figure class="gallery-item" data-category="durvis"><img src="../job_pictures/durvis9.jpeg" alt="Durvis 9" loading="lazy" /><figcaption class="gallery-item__caption"><span class="gallery-item__tag">Durvis</span><p class="gallery-item__title">Durvju montāža #9</p></figcaption></figure>
+
+        <figure class="gallery-item" data-category="durvis"><img src="../job_pictures/durvis10.jpeg" alt="Durvis 10" loading="lazy" /><figcaption class="gallery-item__caption"><span class="gallery-item__tag">Durvis</span><p class="gallery-item__title">Durvju montāža #10</p></figcaption></figure>
+        <figure class="gallery-item" data-category="durvis"><img src="../job_pictures/durvis11.jpeg" alt="Durvis 11" loading="lazy" /><figcaption class="gallery-item__caption"><span class="gallery-item__tag">Durvis</span><p class="gallery-item__title">Durvju montāža #11</p></figcaption></figure>
+        <figure class="gallery-item" data-category="durvis"><img src="../job_pictures/durvis12.jpeg" alt="Durvis 12" loading="lazy" /><figcaption class="gallery-item__caption"><span class="gallery-item__tag">Durvis</span><p class="gallery-item__title">Durvju montāža #12</p></figcaption></figure>
+        <figure class="gallery-item" data-category="durvis"><img src="../job_pictures/durvis13.jpeg" alt="Durvis 13" loading="lazy" /><figcaption class="gallery-item__caption"><span class="gallery-item__tag">Durvis</span><p class="gallery-item__title">Durvju montāža #13</p></figcaption></figure>
+        <figure class="gallery-item" data-category="durvis"><img src="../job_pictures/durvis14.jpeg" alt="Durvis 14" loading="lazy" /><figcaption class="gallery-item__caption"><span class="gallery-item__tag">Durvis</span><p class="gallery-item__title">Durvju montāža #14</p></figcaption></figure>
+        <figure class="gallery-item" data-category="durvis"><img src="../job_pictures/durvis15.jpeg" alt="Durvis 15" loading="lazy" /><figcaption class="gallery-item__caption"><span class="gallery-item__tag">Durvis</span><p class="gallery-item__title">Durvju montāža #15</p></figcaption></figure>
+        <figure class="gallery-item" data-category="durvis"><img src="../job_pictures/durvis16.jpeg" alt="Durvis 16" loading="lazy" /><figcaption class="gallery-item__caption"><span class="gallery-item__tag">Durvis</span><p class="gallery-item__title">Durvju montāža #16</p></figcaption></figure>
+        <figure class="gallery-item" data-category="durvis"><img src="../job_pictures/durvis17.jpeg" alt="Durvis 17" loading="lazy" /><figcaption class="gallery-item__caption"><span class="gallery-item__tag">Durvis</span><p class="gallery-item__title">Durvju montāža #17</p></figcaption></figure>
+        <figure class="gallery-item" data-category="durvis"><img src="../job_pictures/durvis18.jpeg" alt="Durvis 18" loading="lazy" /><figcaption class="gallery-item__caption"><span class="gallery-item__tag">Durvis</span><p class="gallery-item__title">Durvju montāža #18</p></figcaption></figure>
+        <figure class="gallery-item" data-category="durvis"><img src="../job_pictures/durvis19.jpeg" alt="Durvis 19" loading="lazy" /><figcaption class="gallery-item__caption"><span class="gallery-item__tag">Durvis</span><p class="gallery-item__title">Durvju montāža #19</p></figcaption></figure>
+        <figure class="gallery-item" data-category="durvis"><img src="../job_pictures/durvis20.jpeg" alt="Durvis 20" loading="lazy" /><figcaption class="gallery-item__caption"><span class="gallery-item__tag">Durvis</span><p class="gallery-item__title">Durvju montāža #20</p></figcaption></figure>
+        <figure class="gallery-item" data-category="durvis"><img src="../job_pictures/durvis22.jpeg" alt="Durvis 22" loading="lazy" /><figcaption class="gallery-item__caption"><span class="gallery-item__tag">Durvis</span><p class="gallery-item__title">Durvju montāža #22</p></figcaption></figure>
+
+        <figure class="gallery-item" data-category="durvis"><img src="../job_pictures/Durvis23.jpeg" alt="Durvis 23" loading="lazy" /><figcaption class="gallery-item__caption"><span class="gallery-item__tag">Durvis</span><p class="gallery-item__title">Durvju montāža #23</p></figcaption></figure>
+        <figure class="gallery-item" data-category="durvis"><img src="../job_pictures/durvis33.jpeg" alt="Durvis 33" loading="lazy" /><figcaption class="gallery-item__caption"><span class="gallery-item__tag">Durvis</span><p class="gallery-item__title">Durvju montāža #33</p></figcaption></figure>
+        <figure class="gallery-item" data-category="durvis"><img src="../job_pictures/durvis43.jpeg" alt="Durvis 43" loading="lazy" /><figcaption class="gallery-item__caption"><span class="gallery-item__tag">Durvis</span><p class="gallery-item__title">Durvju montāža #43</p></figcaption></figure>
+        <figure class="gallery-item" data-category="durvis"><img src="../job_pictures/durvis44.jpeg" alt="Durvis 44" loading="lazy" /><figcaption class="gallery-item__caption"><span class="gallery-item__tag">Durvis</span><p class="gallery-item__title">Durvju montāža #44</p></figcaption></figure>
+        <figure class="gallery-item" data-category="durvis"><img src="../job_pictures/durvis45.jpeg" alt="Durvis 45" loading="lazy" /><figcaption class="gallery-item__caption"><span class="gallery-item__tag">Durvis</span><p class="gallery-item__title">Durvju montāža #45</p></figcaption></figure>
+
+        <!-- ====== FASĀDE ====== -->
+        <figure class="gallery-item" data-category="fasade"><img src="../job_pictures/fasade%2022.jpeg" alt="Fasade 22" loading="lazy" /><figcaption class="gallery-item__caption"><span class="gallery-item__tag">Fasāde</span><p class="gallery-item__title">Fasādes darbi #22</p></figcaption></figure>
+        <figure class="gallery-item" data-category="fasade"><img src="../job_pictures/fasade%2023.jpeg" alt="Fasade 23" loading="lazy" /><figcaption class="gallery-item__caption"><span class="gallery-item__tag">Fasāde</span><p class="gallery-item__title">Fasādes darbi #23</p></figcaption></figure>
+        <figure class="gallery-item" data-category="fasade"><img src="../job_pictures/fasade%2024.jpeg" alt="Fasade 24" loading="lazy" /><figcaption class="gallery-item__caption"><span class="gallery-item__tag">Fasāde</span><p class="gallery-item__title">Fasādes darbi #24</p></figcaption></figure>
+        <figure class="gallery-item" data-category="fasade"><img src="../job_pictures/fasade25.jpeg" alt="Fasade 25" loading="lazy" /><figcaption class="gallery-item__caption"><span class="gallery-item__tag">Fasāde</span><p class="gallery-item__title">Fasādes darbi #25</p></figcaption></figure>
+        <figure class="gallery-item" data-category="fasade"><img src="../job_pictures/fasade%2026.jpeg" alt="Fasade 26" loading="lazy" /><figcaption class="gallery-item__caption"><span class="gallery-item__tag">Fasāde</span><p class="gallery-item__title">Fasādes darbi #26</p></figcaption></figure>
+        <figure class="gallery-item" data-category="fasade"><img src="../job_pictures/fasade%2027.jpeg" alt="Fasade 27" loading="lazy" /><figcaption class="gallery-item__caption"><span class="gallery-item__tag">Fasāde</span><p class="gallery-item__title">Fasādes darbi #27</p></figcaption></figure>
+        <figure class="gallery-item" data-category="fasade"><img src="../job_pictures/fasade%2028.jpeg" alt="Fasade 28" loading="lazy" /><figcaption class="gallery-item__caption"><span class="gallery-item__tag">Fasāde</span><p class="gallery-item__title">Fasādes darbi #28</p></figcaption></figure>
+        <figure class="gallery-item" data-category="fasade"><img src="../job_pictures/fasade%2029.jpeg" alt="Fasade 29" loading="lazy" /><figcaption class="gallery-item__caption"><span class="gallery-item__tag">Fasāde</span><p class="gallery-item__title">Fasādes darbi #29</p></figcaption></figure>
+        <figure class="gallery-item" data-category="fasade"><img src="../job_pictures/fasade%2030.jpeg" alt="Fasade 30" loading="lazy" /><figcaption class="gallery-item__caption"><span class="gallery-item__tag">Fasāde</span><p class="gallery-item__title">Fasādes darbi #30</p></figcaption></figure>
+        <figure class="gallery-item" data-category="fasade"><img src="../job_pictures/fasade%2031.jpeg" alt="Fasade 31" loading="lazy" /><figcaption class="gallery-item__caption"><span class="gallery-item__tag">Fasāde</span><p class="gallery-item__title">Fasādes darbi #31</p></figcaption></figure>
+        <figure class="gallery-item" data-category="fasade"><img src="../job_pictures/fasade%2032.jpeg" alt="Fasade 32" loading="lazy" /><figcaption class="gallery-item__caption"><span class="gallery-item__tag">Fasāde</span><p class="gallery-item__title">Fasādes darbi #32</p></figcaption></figure>
+        <figure class="gallery-item" data-category="fasade"><img src="../job_pictures/fasade%2033.jpeg" alt="Fasade 33" loading="lazy" /><figcaption class="gallery-item__caption"><span class="gallery-item__tag">Fasāde</span><p class="gallery-item__title">Fasādes darbi #33</p></figcaption></figure>
+        <figure class="gallery-item" data-category="fasade"><img src="../job_pictures/fasade%2034.jpeg" alt="Fasade 34" loading="lazy" /><figcaption class="gallery-item__caption"><span class="gallery-item__tag">Fasāde</span><p class="gallery-item__title">Fasādes darbi #34</p></figcaption></figure>
+        <figure class="gallery-item" data-category="fasade"><img src="../job_pictures/fasade%2035.jpeg" alt="Fasade 35" loading="lazy" /><figcaption class="gallery-item__caption"><span class="gallery-item__tag">Fasāde</span><p class="gallery-item__title">Fasādes darbi #35</p></figcaption></figure>
+        <figure class="gallery-item" data-category="fasade"><img src="../job_pictures/fasade%2036.jpeg" alt="Fasade 36" loading="lazy" /><figcaption class="gallery-item__caption"><span class="gallery-item__tag">Fasāde</span><p class="gallery-item__title">Fasādes darbi #36</p></figcaption></figure>
+
+        <figure class="gallery-item" data-category="fasade"><img src="../job_pictures/fas%C4%81de.jpeg" alt="Fasāde" loading="lazy" /><figcaption class="gallery-item__caption"><span class="gallery-item__tag">Fasāde</span><p class="gallery-item__title">Fasādes apdare</p></figcaption></figure>
+        <figure class="gallery-item" data-category="fasade"><img src="../job_pictures/fas%C4%81de2.jpeg" alt="Fasāde 2" loading="lazy" /><figcaption class="gallery-item__caption"><span class="gallery-item__tag">Fasāde</span><p class="gallery-item__title">Fasādes apdare #2</p></figcaption></figure>
+
+        <!-- ====== FLĪZES ====== -->
+        <figure class="gallery-item" data-category="flizes"><img src="../job_pictures/Flīzes.jpeg" alt="Flīzes" loading="lazy" /><figcaption class="gallery-item__caption"><span class="gallery-item__tag">Flīzes</span><p class="gallery-item__title">Flīzēšana</p></figcaption></figure>
+        <figure class="gallery-item" data-category="flizes"><img src="../job_pictures/Flīzes2.jpeg" alt="Flīzes 2" loading="lazy" /><figcaption class="gallery-item__caption"><span class="gallery-item__tag">Flīzes</span><p class="gallery-item__title">Flīzēšana #2</p></figcaption></figure>
+
+        <!-- ====== IEKŠTELPA ====== -->
+        <figure class="gallery-item" data-category="iekstelpa"><img src="../job_pictures/iekstelpa%204.jpeg" alt="Iekštelpa 4" loading="lazy" /><figcaption class="gallery-item__caption"><span class="gallery-item__tag">Iekštelpas</span><p class="gallery-item__title">Iekštelpu apdare #4</p></figcaption></figure>
+        <figure class="gallery-item" data-category="iekstelpa"><img src="../job_pictures/iekstelpa%207.jpeg" alt="Iekštelpa 7" loading="lazy" /><figcaption class="gallery-item__caption"><span class="gallery-item__tag">Iekštelpas</span><p class="gallery-item__title">Iekštelpu apdare #7</p></figcaption></figure>
+        <figure class="gallery-item" data-category="iekstelpa"><img src="../job_pictures/iekstelpa%2021.jpeg" alt="Iekštelpa 21" loading="lazy" /><figcaption class="gallery-item__caption"><span class="gallery-item__tag">Iekštelpas</span><p class="gallery-item__title">Iekštelpu apdare #21</p></figcaption></figure>
+        <figure class="gallery-item" data-category="iekstelpa"><img src="../job_pictures/iekstelpa%2025.jpeg" alt="Iekštelpa 25" loading="lazy" /><figcaption class="gallery-item__caption"><span class="gallery-item__tag">Iekštelpas</span><p class="gallery-item__title">Iekštelpu apdare #25</p></figcaption></figure>
+        <figure class="gallery-item" data-category="iekstelpa"><img src="../job_pictures/iekstelpa%2026.jpeg" alt="Iekštelpa 26" loading="lazy" /><figcaption class="gallery-item__caption"><span class="gallery-item__tag">Iekštelpas</span><p class="gallery-item__title">Iekštelpu apdare #26</p></figcaption></figure>
+        <figure class="gallery-item" data-category="iekstelpa"><img src="../job_pictures/iekstelpa%2027.jpeg" alt="Iekštelpa 27" loading="lazy" /><figcaption class="gallery-item__caption"><span class="gallery-item__tag">Iekštelpas</span><p class="gallery-item__title">Iekštelpu apdare #27</p></figcaption></figure>
+
+        <!-- ⚠️ ŠIM failam tev mapē izskatās dīvains nosaukums: "iekstelp[a 24.jpeg"
+             Ja tiešām tieši tā arī saucas, atstāj tieši tā (ar [ ) un encode spaces.
+        -->
+        <figure class="gallery-item" data-category="iekstelpa"><img src="../job_pictures/iekstelp%5Ba%2024.jpeg" alt="Iekštelpa 24" loading="lazy" /><figcaption class="gallery-item__caption"><span class="gallery-item__tag">Iekštelpas</span><p class="gallery-item__title">Iekštelpu apdare #24</p></figcaption></figure>
+
+        <!-- ====== JUMTS ====== -->
+        <figure class="gallery-item" data-category="jumts"><img src="../job_pictures/jumts%201.jpeg" alt="Jumts 1" loading="lazy" /><figcaption class="gallery-item__caption"><span class="gallery-item__tag">Jumts</span><p class="gallery-item__title">Jumta darbi #1</p></figcaption></figure>
+        <figure class="gallery-item" data-category="jumts"><img src="../job_pictures/jumts.jpeg" alt="Jumts" loading="lazy" /><figcaption class="gallery-item__caption"><span class="gallery-item__tag">Jumts</span><p class="gallery-item__title">Jumta darbi</p></figcaption></figure>
+        <figure class="gallery-item" data-category="jumts"><img src="../job_pictures/jumts2.jpeg" alt="Jumts 2" loading="lazy" /><figcaption class="gallery-item__caption"><span class="gallery-item__tag">Jumts</span><p class="gallery-item__title">Jumta darbi #2</p></figcaption></figure>
+
+        <!-- ====== KĀPNES ====== -->
+        <figure class="gallery-item" data-category="kapnes"><img src="../job_pictures/k%C4%81pnes%204.jpeg" alt="Kāpnes 4" loading="lazy" /><figcaption class="gallery-item__caption"><span class="gallery-item__tag">Kāpnes</span><p class="gallery-item__title">Kāpņu montāža #4</p></figcaption></figure>
+        <figure class="gallery-item" data-category="kapnes"><img src="../job_pictures/k%C4%81pnes.jpeg" alt="Kāpnes" loading="lazy" /><figcaption class="gallery-item__caption"><span class="gallery-item__tag">Kāpnes</span><p class="gallery-item__title">Kāpņu montāža</p></figcaption></figure>
+
+        <!-- ====== KRĀSNS ====== -->
+        <figure class="gallery-item" data-category="krasns"><img src="../job_pictures/kr%C4%81sns%204.jpeg" alt="Krāsns 4" loading="lazy" /><figcaption class="gallery-item__caption"><span class="gallery-item__tag">Krāsns</span><p class="gallery-item__title">Krāsns darbi #4</p></figcaption></figure>
+        <figure class="gallery-item" data-category="krasns"><img src="../job_pictures/kr%C4%81sns%205.jpeg" alt="Krāsns 5" loading="lazy" /><figcaption class="gallery-item__caption"><span class="gallery-item__tag">Krāsns</span><p class="gallery-item__title">Krāsns darbi #5</p></figcaption></figure>
+        <figure class="gallery-item" data-category="krasns"><img src="../job_pictures/kr%C4%81sns.jpeg" alt="Krāsns" loading="lazy" /><figcaption class="gallery-item__caption"><span class="gallery-item__tag">Krāsns</span><p class="gallery-item__title">Krāsns darbi</p></figcaption></figure>
+
+        <!-- ====== LOGI ====== -->
+        <figure class="gallery-item" data-category="logs"><img src="../job_pictures/logs%2021.jpeg" alt="Logs 21" loading="lazy" /><figcaption class="gallery-item__caption"><span class="gallery-item__tag">Logi</span><p class="gallery-item__title">Logu darbi #21</p></figcaption></figure>
+        <figure class="gallery-item" data-category="logs"><img src="../job_pictures/logs%2028.jpeg" alt="Logs 28" loading="lazy" /><figcaption class="gallery-item__caption"><span class="gallery-item__tag">Logi</span><p class="gallery-item__title">Logu darbi #28</p></figcaption></figure>
+        <figure class="gallery-item" data-category="logs"><img src="../job_pictures/logs%2029.jpeg" alt="Logs 29" loading="lazy" /><figcaption class="gallery-item__caption"><span class="gallery-item__tag">Logi</span><p class="gallery-item__title">Logu darbi #29</p></figcaption></figure>
+        <figure class="gallery-item" data-category="logs"><img src="../job_pictures/logs.jpeg" alt="Logs" loading="lazy" /><figcaption class="gallery-item__caption"><span class="gallery-item__tag">Logi</span><p class="gallery-item__title">Logu darbi</p></figcaption></figure>
+        <figure class="gallery-item" data-category="logs"><img src="../job_pictures/logs2.jpeg" alt="Logs 2" loading="lazy" /><figcaption class="gallery-item__caption"><span class="gallery-item__tag">Logi</span><p class="gallery-item__title">Logu darbi #2</p></figcaption></figure>
+        <figure class="gallery-item" data-category="logs"><img src="../job_pictures/logs3.jpeg" alt="Logs 3" loading="lazy" /><figcaption class="gallery-item__caption"><span class="gallery-item__tag">Logi</span><p class="gallery-item__title">Logu darbi #3</p></figcaption></figure>
+
+        <!-- ====== SANITĀRAIS MEZGLS ====== -->
+        <figure class="gallery-item" data-category="sanmezgls"><img src="../job_pictures/Sanit%C4%81rais%20mezgls.jpeg" alt="Sanitārais mezgls" loading="lazy" /><figcaption class="gallery-item__caption"><span class="gallery-item__tag">Sanitārais mezgls</span><p class="gallery-item__title">Sanmezgla darbi</p></figcaption></figure>
+
+        <figure class="gallery-item" data-category="sanmezgls"><img src="../job_pictures/Sanit%C4%81rais%20mezgls%202.jpeg" alt="Sanitārais mezgls 2" loading="lazy" /><figcaption class="gallery-item__caption"><span class="gallery-item__tag">Sanitārais mezgls</span><p class="gallery-item__title">Sanmezgla darbi #2</p></figcaption></figure>
+        <figure class="gallery-item" data-category="sanmezgls"><img src="../job_pictures/Sanit%C4%81rais%20mezgls%203.jpeg" alt="Sanitārais mezgls 3" loading="lazy" /><figcaption class="gallery-item__caption"><span class="gallery-item__tag">Sanitārais mezgls</span><p class="gallery-item__title">Sanmezgla darbi #3</p></figcaption></figure>
+        <figure class="gallery-item" data-category="sanmezgls"><img src="../job_pictures/Sanit%C4%81rais%20mezgls%204.jpeg" alt="Sanitārais mezgls 4" loading="lazy" /><figcaption class="gallery-item__caption"><span class="gallery-item__tag">Sanitārais mezgls</span><p class="gallery-item__title">Sanmezgla darbi #4</p></figcaption></figure>
+        <figure class="gallery-item" data-category="sanmezgls"><img src="../job_pictures/Sanit%C4%81rais%20mezgls%206.jpeg" alt="Sanitārais mezgls 6" loading="lazy" /><figcaption class="gallery-item__caption"><span class="gallery-item__tag">Sanitārais mezgls</span><p class="gallery-item__title">Sanmezgla darbi #6</p></figcaption></figure>
+        <figure class="gallery-item" data-category="sanmezgls"><img src="../job_pictures/Sanit%C4%81rais%20mezgls%207.jpeg" alt="Sanitārais mezgls 7" loading="lazy" /><figcaption class="gallery-item__caption"><span class="gallery-item__tag">Sanitārais mezgls</span><p class="gallery-item__title">Sanmezgla darbi #7</p></figcaption></figure>
+        <figure class="gallery-item" data-category="sanmezgls"><img src="../job_pictures/Sanit%C4%81rais%20mezgls%208.jpeg" alt="Sanitārais mezgls 8" loading="lazy" /><figcaption class="gallery-item__caption"><span class="gallery-item__tag">Sanitārais mezgls</span><p class="gallery-item__title">Sanmezgla darbi #8</p></figcaption></figure>
+        <figure class="gallery-item" data-category="sanmezgls"><img src="../job_pictures/Sanit%C4%81rais%20mezgls%209.jpeg" alt="Sanitārais mezgls 9" loading="lazy" /><figcaption class="gallery-item__caption"><span class="gallery-item__tag">Sanitārais mezgls</span><p class="gallery-item__title">Sanmezgla darbi #9</p></figcaption></figure>
+        <figure class="gallery-item" data-category="sanmezgls"><img src="../job_pictures/Sanit%C4%81rais%20mezgls%2010.jpeg" alt="Sanitārais mezgls 10" loading="lazy" /><figcaption class="gallery-item__caption"><span class="gallery-item__tag">Sanitārais mezgls</span><p class="gallery-item__title">Sanmezgla darbi #10</p></figcaption></figure>
+        <figure class="gallery-item" data-category="sanmezgls"><img src="../job_pictures/Sanit%C4%81rais%20mezgls%2011.jpeg" alt="Sanitārais mezgls 11" loading="lazy" /><figcaption class="gallery-item__caption"><span class="gallery-item__tag">Sanitārais mezgls</span><p class="gallery-item__title">Sanmezgla darbi #11</p></figcaption></figure>
+        <figure class="gallery-item" data-category="sanmezgls"><img src="../job_pictures/Sanit%C4%81rais%20mezgls%2020.jpeg" alt="Sanitārais mezgls 20" loading="lazy" /><figcaption class="gallery-item__caption"><span class="gallery-item__tag">Sanitārais mezgls</span><p class="gallery-item__title">Sanmezgla darbi #20</p></figcaption></figure>
+
+        <!-- ====== TELPAS (Telpa / telpa2... ) ====== -->
+        <figure class="gallery-item" data-category="telpa"><img src="../job_pictures/Telpa.jpeg" alt="Telpa" loading="lazy" /><figcaption class="gallery-item__caption"><span class="gallery-item__tag">Telpas</span><p class="gallery-item__title">Telpu apdare</p></figcaption></figure>
+        <figure class="gallery-item" data-category="telpa"><img src="../job_pictures/telpa2.jpeg" alt="Telpa 2" loading="lazy" /><figcaption class="gallery-item__caption"><span class="gallery-item__tag">Telpas</span><p class="gallery-item__title">Telpu apdare #2</p></figcaption></figure>
+        <figure class="gallery-item" data-category="telpa"><img src="../job_pictures/telpa3.jpeg" alt="Telpa 3" loading="lazy" /><figcaption class="gallery-item__caption"><span class="gallery-item__tag">Telpas</span><p class="gallery-item__title">Telpu apdare #3</p></figcaption></figure>
+        <figure class="gallery-item" data-category="telpa"><img src="../job_pictures/telpa4.jpeg" alt="Telpa 4" loading="lazy" /><figcaption class="gallery-item__caption"><span class="gallery-item__tag">Telpas</span><p class="gallery-item__title">Telpu apdare #4</p></figcaption></figure>
+        <figure class="gallery-item" data-category="telpa"><img src="../job_pictures/telpa5.jpeg" alt="Telpa 5" loading="lazy" /><figcaption class="gallery-item__caption"><span class="gallery-item__tag">Telpas</span><p class="gallery-item__title">Telpu apdare #5</p></figcaption></figure>
+        <figure class="gallery-item" data-category="telpa"><img src="../job_pictures/Telpa6.jpeg" alt="Telpa 6" loading="lazy" /><figcaption class="gallery-item__caption"><span class="gallery-item__tag">Telpas</span><p class="gallery-item__title">Telpu apdare #6</p></figcaption></figure>
+
+        <!-- ====== TERASE ====== -->
+        <figure class="gallery-item" data-category="terase"><img src="../job_pictures/terase.jpeg" alt="Terase" loading="lazy" /><figcaption class="gallery-item__caption"><span class="gallery-item__tag">Terase</span><p class="gallery-item__title">Terases darbi</p></figcaption></figure>
+
+        <!-- ====== VIRTUVE ====== -->
+        <figure class="gallery-item" data-category="virtuve"><img src="../job_pictures/virtuve.jpeg" alt="Virtuve" loading="lazy" /><figcaption class="gallery-item__caption"><span class="gallery-item__tag">Virtuve</span><p class="gallery-item__title">Virtuves apdare</p></figcaption></figure>
+        <figure class="gallery-item" data-category="virtuve"><img src="../job_pictures/virtuve2.jpeg" alt="Virtuve 2" loading="lazy" /><figcaption class="gallery-item__caption"><span class="gallery-item__tag">Virtuve</span><p class="gallery-item__title">Virtuves apdare #2</p></figcaption></figure>
+        <figure class="gallery-item" data-category="virtuve"><img src="../job_pictures/virtuve3.jpeg" alt="Virtuve 3" loading="lazy" /><figcaption class="gallery-item__caption"><span class="gallery-item__tag">Virtuve</span><p class="gallery-item__title">Virtuves apdare #3</p></figcaption></figure>
+        <figure class="gallery-item" data-category="virtuve"><img src="../job_pictures/virtuve5.jpeg" alt="Virtuve 5" loading="lazy" /><figcaption class="gallery-item__caption"><span class="gallery-item__tag">Virtuve</span><p class="gallery-item__title">Virtuves apdare #5</p></figcaption></figure>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== GAISMASKASTE ====== -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-label="Attēlu skatītājs" aria-hidden="true">
+    <button class="lightbox__close" id="lightboxClose" aria-label="Aizvērt skatītāju">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+    </button>
+    <button class="lightbox__nav lightbox__nav--prev" id="lightboxPrev" aria-label="Iepriekšējais attēls">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+    </button>
+    <button class="lightbox__nav lightbox__nav--next" id="lightboxNext" aria-label="Nākamais attēls">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+    </button>
+    <div class="lightbox__content">
+      <img class="lightbox__image" id="lightboxImage" src="" alt="" />
+      <p class="lightbox__caption" id="lightboxCaption"></p>
+    </div>
+  </div>
+
+  <!-- ====== KĀJENE ====== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__bottom" style="margin-top: 0; border-top: none; padding-top: 0;">
+        <p>&copy; 2026 EVOSM. Visas tiesības aizsargātas.</p>
+        <div class="footer__legal">
+          <a href="index.html">Sākums</a>
+          <a href="index.html#contact">Kontakti</a>
+          <a href="#">Privātums</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="gallery.js"></script>
+</body>
+</html>
